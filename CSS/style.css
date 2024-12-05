@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+  outline: none;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 16px;
+  background-color: #FEF3E2;
+}
+
+input, button, textarea {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.9;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1320px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.w25 {
+  width: 25%;
+  padding: 15px;
+}
+
+.w33 {
+  width: 33.3333%;
+  padding: 15px;
+}
+
+.w50 {
+  width: 50%;
+  padding: 15px;
+}
+
+.w100 {
+  width: 100%;
+}
+
+/* Navigation */
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: #FAB12F;
+  padding: 12px 20px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding-left: 30px;
+}
+
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #FA4032;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #FA4032;
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+  width: 100%;
+}
+
+.open-menu, .close-menu {
+  position: absolute;
+  color: #FA4032;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+#check {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: #FA812F;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .menu li {
+    margin-top: 40px;
+  }
+
+  .menu li a {
+    padding: 10px;
+  }
+
+  .open-menu, .close-menu {
+    display: block;
+  }
+
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
+
+/* General Elements */
+.highlight {
+  background-color: #FA812F;
+}
+
+.highlight-text {
+  color: #FA4032;
+}
+
+.text-white {
+  color: #FEF3E2;
+  font-size: 18px;
+}
+
+.pad75 {
+  padding: 75px 15px;
+}
+
+.pad25 {
+  padding: 25px 15px;
+}
+
+/* Showcase Section */
+.showcase {
+  background-color: #FAB12F;
+}
+
+.showcase h1 {
+  font-size: 72px;
+  color: #FA4032;
+}
+
+.showcase p {
+  color: #FA4032;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 15px 0;
+}
+
+/* Buttons */
+.button {
+  background-color: #FA812F;
+  color: #FEF3E2;
+  padding: 15px 20px;
+  border: 2px solid #FA4032;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #FA4032;
+  color: #FEF3E2;
+  transform: scale(0.95);
+}
+
+/* Gallery Section */
+.gallery {
+  background-color: #FAB12F;
+  padding: 75px 0;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #FA812F;
+}
+
+/* Gallery Ends */
+
+
+/* Partners*/
+
+.partners-section {
+  background-color: #FEF3E2; /* New background color */
+  padding: 75px 0;
+}
+
+.partners-section .section-title {
+  color: #FA4032; /* Title color adjusted to complement the new background */
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: space-around; /* Distribute space evenly between images */
+  align-items: center;
+  flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
+}
+
+.partner-logo {
+  width: 15%; /* Adjust the width of the logo container */
+  text-align: center;
+  padding: 20px;
+}
+
+.partner-logo img {
+  max-width: 100%; /* Ensure the images scale responsively */
+  height: auto; /* Maintain the aspect ratio of the images */
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Add hover effect */
+.partner-logo img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+
+
+/* Partners Ends*/
+
+/* Contact Us Section Styles */
+.showcase {
+  background-color: #FEF3E2; /* Light Gray background */
+  padding: 75px 0;
+}
+
+.showcase .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.showcase h1 {
+  font-size: 36px;
+  color: #FA4032; /* Dark Blue */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Contact Form Styles */
+#contact-form {
+  background-color: #fff; /* White background */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form .form-group {
+  margin-bottom: 25px;
+}
+
+#contact-form label {
+  font-size: 18px;
+  color: #FA4032; /* Dark Blue */
+  margin-bottom: 10px;
+  display: block;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #CCC; /* Light Gray border */
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #F7F7F7; /* Light Gray background for inputs */
+  transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #FA4032; /* Dark Blue on focus */
+  outline: none;
+}
+
+#contact-form button {
+  background-color: #FAB12F; /* Gold */
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+  background-color: #FA4032; /* Dark Blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  #contact-form {
+      padding: 25px;
+  }
+
+  #contact-form h1 {
+      font-size: 30px;
+  }
+
+  #contact-form label {
+      font-size: 16px;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  #contact-form button {
+      font-size: 16px;
+      padding: 12px;
+  }
+}
+/* input form ends*/
+
+/* FAQ Section Styles */
+.faq-section {
+  background-color: #FEF3E2; /* Light Gray background */
+  padding: 75px 0;
+}
+
+.faq-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-section .section-title {
+  font-size: 36px;
+  color: #FAB12F; /* Dark Blue */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  margin-top: 30px;
+}
+
+/* FAQ Item Styles */
+.faq-item {
+  background-color: #fff; /* White background for each FAQ item */
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item .faq-question {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FAB12F; /* Dark Blue */
+  margin-bottom: 10px;
+}
+
+.faq-item .faq-answer {
+  font-size: 16px;
+  color: #333; /* Dark Gray for the answer */
+  line-height: 1.5;
+}
+
+/* Button for Read More */
+.read-more-button {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.read-more-button .button {
+  background-color: #FAB12F; /* Gold */
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.read-more-button .button:hover {
+  background-color: #FA812F; /* Dark Blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .faq-section .section-title {
+      font-size: 30px;
+  }
+
+  .faq-item .faq-question {
+      font-size: 18px;
+  }
+
+  .faq-item .faq-answer {
+      font-size: 14px;
+  }
+
+  .read-more-button .button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+}
+/*faq ends*/
+
+/* Footer */
+footer {
+  background-color: #FA812F;
+  padding: 20px 0;
+  color: #FEF3E2;
+}
+
+footer a {
+  margin-right: 10px;
+  color: #FEF3E2;
+}
+
+/* Make the images container flex and align them horizontally */
+footer .w25 {
+  display: flex; /* Align images in a row */
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Center the images vertically */
+}
+
+footer .w25 a {
+  margin: 0 10px; /* Add space between the images */
+}
+
+/* Style for the search input field */
+footer input[type="text"] {
+  width: 500px; /* Set the width of the search bar */
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #fff; /* White border */
+  border-radius: 50px; /* Circular edges */
+  outline: none;
+  background-color: #FEF3E2; /* Light background color */
+  color: #333; /* Text color */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Style for the search button */
+footer button[type="submit"] {
+  background-color: #FA4032;
+  color: #FEF3E2;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px; /* Circular button */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for the search button */
+footer button[type="submit"]:hover {
+  background-color: #FAB12F;
+}
+
+/* Focus effect for the input field */
+footer input[type="text"]:focus {
+  border-color: #FA4032; /* Change border color when focused */
+}
